@@ -100,17 +100,17 @@
 
 \tikzstyle{every picture}+=[remember picture, overlay]
 \newcommand\wdmaketitle{%
-    \setcounter{page}{0}
+    \setcounter{page}{0}  
     \thispagestyle{empty}
     \begin{tikzpicture}%
-    % \filldraw[fill=black!87,draw=black!87] (-5,15) rectangle (0.37,-35);
-    % \pgftext[left,top,x=-3.1cm,y=-0.97cm]%
-    % {\includegraphics[height=2.97cm,width=3.6cm]{\themefigurepath{contents_logo_monochrome.pdf}}};
-    % \filldraw[fill=doc,draw=doc] (0.37,15) rectangle (20,-0.97);
-    % \filldraw[fill=auxi,draw=auxi] (0.37,-0.97) rectangle (20,-3.94);
-    % \draw[white,thick] (25,-1.605) -- (1.5,-1.605) arc
-    % (90:180:0.5) -- (1,-2.705) arc (180:270:0.5) -- (25,-3.205);
-    % \pgftext[left,x=1.5cm,y=-2.475cm]{\geofont\fontsizec{1.cm}\@wdtitle};
+    \filldraw[fill=gray!87,draw=gray!87] (-5,15) rectangle (0.37,-35);
+    \pgftext[left,top,x=-3.1cm,y=-0.97cm]%
+    {\includegraphics[height=2.97cm,width=3.6cm]{\themefigurepath{contents_logo_monochrome.png}}};
+    \filldraw[fill=doc,draw=doc] (0.37,15) rectangle (20,-0.97);
+    \filldraw[fill=auxi,draw=auxi] (0.37,-0.97) rectangle (20,-3.94);
+    \draw[white,thick] (25,-1.605) -- (1.5,-1.605) arc
+    (90:180:0.5) -- (1,-2.705) arc (180:270:0.5) -- (25,-3.205);
+    \pgftext[left,x=1.5cm,y=-2.475cm]{\geofont\fontsizec{1.cm}\@wdtitle};
     \end{tikzpicture}
     \ifthenelse{\equal{\@wdedition}{}}
     {
@@ -143,7 +143,6 @@
     \renewcommand{\thepage}{\Roman{page}}
     \thispagestyle{empty}
 }
-
 \newcommand*{\partabstractfp}[1]{\gdef\@partabstractfp{#1}}%the first paragraph of abstract
 \newcommand*{\partabstractrp}[1]{\gdef\@partabstractrp{#1}}%the rest paragraphs of abstract
 \newcommand*{\partabstractlettrine}[2]{

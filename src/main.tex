@@ -1,0 +1,45 @@
+\documentclass{bodiebook}
+
+\wdtexbooktheme{bodie} %
+\wdtexbookcolor{print} % green, violet, print
+
+\wdtitle{一本书的由来}
+
+\wdedition{1.0}
+
+\wdfirstauthor{张三}
+\wdfirstinstitute{}
+\wdsecondauthor{李四}
+\wdsecondinstitute{}
+\wdthirdauthor{王五}
+\wdthirdinstitute{}
+
+\begin{document}
+
+\wdmaketitle
+
+\shorttoc{Brief Contents}{0}
+
+\tableofcontents
+
+%====== be sure to add this part ====%
+\switchgeometry
+\wdstartdoc
+% \addtocontents{toc}{\protect\begin{multicols}{2}}
+% \setcounter{page}{1}
+% \renewcommand{\thepage}{\arabic{page}}
+% ====== be sure to add this part ====%
+
+\input{body.tex}
+
+%====== be sure to add this part ====%
+%\addtocontents{toc}{\protect\end{multicols}}
+\wdenddoc
+%====== be sure to add this part ====%
+
+\renewcommand\bibname{参考文献}
+\bibliography{bibliography}
+\bibliographystyle{ieeetr}
+
+%\enddoc
+\end{document}

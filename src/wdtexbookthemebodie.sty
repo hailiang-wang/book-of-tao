@@ -1,0 +1,624 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% LaTeX BOOK Template
+%% Template by Wd, <wd20060220@gmail.com>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{wdtexbookthemebodie}[2014/11/06 v1.0 book template theme: bodie]
+
+
+%-------------------------------------------------------------------------------
+%                 book theme definition
+%-------------------------------------------------------------------------------
+
+%============================= Fonts =============================================%
+%=================================================================================%
+\def\geofont{
+\fontspec[Path = fonts/,
+          ItalicFont=Geometric415BT-Italic,
+          BoldFont=Geometric415BT-Bold,
+          BoldItalicFont=Geometric415BT-BoldItalic]{Geometric415BT-Regular.ttf}
+}
+
+\def\geofontlt{
+\fontspec[Path = fonts/,
+          ItalicFont=Geometric415BT-LiteItalic,
+          BoldFont=Geometric415BT-Regular,
+          BoldItalicFont=Geometric415BT-Italic]{Geometric415BT-Lite.ttf}
+}
+
+\def\geofontf{
+\fontspec[Path = fonts/,
+          ItalicFont=Geometric415BT-LiteItalic,
+          BoldFont=Geometric415BT-Bold,
+          BoldItalicFont=Geometric415BT-BoldItalic]{Geometric415BT-Lite.ttf}
+}
+
+\def\geofontltc{
+\fontspec[Path = fonts/,
+          ItalicFont=Geometric415BT-LiteItalic,
+          BoldFont=Geometric415BT-Regular,
+          BoldItalicFont=Geometric415BT-Italic,Color=doc]{Geometric415BT-Lite.ttf}
+}
+
+\def\geofontrm{
+\fontspec[Path = fonts/,
+          BoldFont=Geometric415BT-Regular]{Geometric415BT-Regular.ttf}
+}
+
+
+%======================== Page Geometry ==========================================%
+%=================================================================================%
+
+\geometry{left=1in,
+          right=1in,
+          top=1in,
+          bottom=1in,
+          headsep=1cm,
+          marginparwidth=85pt,
+          marginparsep=11pt}
+
+%========================== Title and Toc Style ==================================%
+%=================================================================================%
+%minitoc
+
+%\RequirePackage{minitoc}
+%
+%\noptcrule \noptcpagenumbers \mtcsetdepth{parttoc}{0}
+%\mtcsetfeature{parttoc}{before}{} \mtcsetfeature{parttoc}{after}{}
+%\setlength{\ptcindent}{0pt}
+%\renewcommand{\mtcgapbeforeheads}{0pt}
+%\renewcommand{\mtcgapafterheads}{0pt}
+%%\renewcommand{\ptcfont}{\geofont\Large\rmfamily}
+%\renewcommand{\ptcCfont}{\geofontrm\color{doc}\large}
+%\renewcommand{\ptifont}{\geofont\bfseries\Large}
+%\renewcommand{\ptctitle}{CHAPTERS IN THIS PART:}
+
+%Part title style
+%\RequirePackage{eso-pic}
+
+%the title page
+
+\makeatletter
+% \newcommand*{\wdtexbookcolor}[1]{\gdef\@wdtexbookcolor{#1}}
+% \newcommand{\themefigurepath}[1]{./figure/\@wdtexbookcolor/#1}
+% \RequirePackage{wdtexbookcolor\@wdtexbookcolor}
+
+\newcommand*{\wdtitle}[1]{\gdef\@wdtitle{#1}}
+\newcommand*{\wdedition}[1]{\gdef\@wdedition{#1}}
+\newcommand*{\wdfirstauthor}[1]{\gdef\@wdfirstauthor{#1}}
+\newcommand*{\wdfirstinstitute}[1]{\gdef\@wdfirstinstitute{#1}}
+\newcommand*{\wdsecondauthor}[1]{\gdef\@wdsecondauthor{#1}}
+\newcommand*{\wdsecondinstitute}[1]{\gdef\@wdsecondinstitute{#1}}
+\newcommand*{\wdthirdauthor}[1]{\gdef\@wdthirdauthor{#1}}
+\newcommand*{\wdthirdinstitute}[1]{\gdef\@wdthirdinstitute{#1}}
+%\newcommand*{\wdsubtitle}[1]{\gdef\@wdsubtitle{#1}}
+%\newcommand*{\wddept}[1]{\gdef\@wddept{#1}}
+%\newcommand*{\wdstuid}[1]{\gdef\@wdstuid{#1}}
+%\newcommand*{\wdclass}[1]{\gdef\@wdclass{#1}}
+%\newcommand*{\wdteacher}[1]{\gdef\@wdteacher{#1}}
+%\newcommand*{\wddate}[1]{\gdef\@wddate{#1}}
+
+\tikzstyle{every picture}+=[remember picture, overlay]
+\newcommand\wdmaketitle{%
+    \setcounter{page}{0}
+    \thispagestyle{empty}
+    \begin{tikzpicture}%
+    % \filldraw[fill=black!87,draw=black!87] (-5,15) rectangle (0.37,-35);
+    % \pgftext[left,top,x=-3.1cm,y=-0.97cm]%
+    % {\includegraphics[height=2.97cm,width=3.6cm]{\themefigurepath{contents_logo_monochrome.pdf}}};
+    % \filldraw[fill=doc,draw=doc] (0.37,15) rectangle (20,-0.97);
+    % \filldraw[fill=auxi,draw=auxi] (0.37,-0.97) rectangle (20,-3.94);
+    % \draw[white,thick] (25,-1.605) -- (1.5,-1.605) arc
+    % (90:180:0.5) -- (1,-2.705) arc (180:270:0.5) -- (25,-3.205);
+    % \pgftext[left,x=1.5cm,y=-2.475cm]{\geofont\fontsizec{1.cm}\@wdtitle};
+    \end{tikzpicture}
+    \ifthenelse{\equal{\@wdedition}{}}
+    {
+    \vskip 1.8in
+    \noindent\hskip.5\textwidth{\geofont\huge\ }\hfil
+    \vspace{2in}
+    }
+    {
+    \vskip 1.8in
+    \noindent\hskip.5\textwidth{\geofont\huge\@wdedition~Edition}\hfil
+    \vspace{2in}
+    }
+
+    \noindent\hskip.5\textwidth{\geofont\Large\@wdfirstauthor}\hfil
+    \vskip 5pt
+    \noindent\hskip.5\textwidth{\geofontlt\normalsize\@wdfirstinstitute}\hfil
+    \ifthenelse{\equal{\@wdsecondauthor}{}}{}{
+    \vskip 10pt
+    \noindent\hskip.5\textwidth{\geofont\Large\@wdsecondauthor}\hfil
+    \vskip 5pt
+    \noindent\hskip.5\textwidth{\geofontlt\normalsize\@wdsecondinstitute}\hfil
+    }
+    \ifthenelse{\equal{\@wdthirdauthor}{}}{}{
+    \vskip 10pt
+    \noindent\hskip.5\textwidth{\geofont\Large\@wdthirdauthor}\hfil
+    \vskip 5pt
+    \noindent\hskip.5\textwidth{\geofontlt\normalsize\@wdthirdinstitute}\hfil
+    }
+    \newpage
+    \renewcommand{\thepage}{\Roman{page}}
+    \thispagestyle{empty}
+}
+
+\newcommand*{\partabstractfp}[1]{\gdef\@partabstractfp{#1}}%the first paragraph of abstract
+\newcommand*{\partabstractrp}[1]{\gdef\@partabstractrp{#1}}%the rest paragraphs of abstract
+\newcommand*{\partabstractlettrine}[2]{
+\gdef\@pablfirst{#1}
+\gdef\@pablsecond{#2}}%the first word of abstract, shown in lettrine effect
+
+\renewcommand{\LettrineFontHook}{\geofont\bfseries\color{black!40}}
+\renewcommand{\LettrineTextFont}{\relax\geofontlt\normalsize}
+
+%odd page
+\newcommand\partformatodd[1]{%
+    \thispagestyle{empty}
+    %\AddToShipoutPictureBG*{%background
+    \kern -1.29cm\hbox{
+    \begin{tikzpicture}%
+    % \filldraw[fill=black!70,draw=black!70] (-15,15) rectangle (22,-25);
+    % \pgftext[left,x=-1.8cm,y=5cm]%
+    % {\includegraphics[width=22cm]{\themefigurepath{title_background.pdf}}};
+    % \filldraw[fill=black!10,draw=black!10] (-15,-1) rectangle (22,-10);
+    % \filldraw[fill=doc,draw=doc] (18,15) rectangle (22,-25);
+    % \filldraw[fill=black!80,draw=white,thick] (-5,5) -- (18,5) arc (90:0:0.5) --
+    % (18.5,3.5) arc (0:-90:0.5) -- (-5,3);
+    \pgftext[right,base,x=17cm,y=5.5cm]{\geofont\color{black!80}\Huge\bfseries PART~\thepart};
+    \pgftext[right,x=17cm,y=4cm]{\geofont\color{white}\fontsizec{1.3cm}\MakeUppercase{#1}};
+    % \filldraw[fill=white,draw=white] (3,-25) -- (3,-10) arc (180:90:0.5) -- (14.1,-9.5) arc (90:0:0.5) --
+    % (14.6,-25);
+    \pgftext[left,top,x=3.5cm,y=-10cm]{
+    \parbox[t]{10.6cm}{
+    {\geofont\Large\bfseries CHAPTERS IN THIS PART:}
+    \startcontents
+    \printcontents{l}{0}{\setcounter{tocdepth}{0}}}
+%    {\geofont\Large\bfseries 1\quad}{\geofontlt\large\color{doc} Questions of Design}\\[10pt]
+%    {\geofont\Large\bfseries 2\quad}{\geofontlt\large\color{doc} Questions of Design}\\[10pt]
+%    {\geofont\Large\bfseries 3\quad}{\geofontlt\large\color{doc} Questions of Design}
+    };
+    \pgftext[left,top,x=1cm,y=-2cm]{
+    \parbox[t]{\textwidth+\marginparsep+\marginparwidth}{\parindent=1em
+    \geofontlt\normalsize
+    \begin{multicols}{2}
+    {\lettrine[findent=.3em, lhang=0, lines=3]{\@pablfirst}{\@pablsecond}
+    \@partabstractfp
+    \par}
+
+    \@partabstractrp
+    \end{multicols}
+    }
+    }
+    \end{tikzpicture}
+    }%}
+}
+
+%even page
+\newcommand\partformateven[1]{%
+    \thispagestyle{empty}
+    %\AddToShipoutPictureBG*{%background
+    \kern 13.47cm\hbox{
+    \begin{tikzpicture}%
+    % \filldraw[fill=black!70,draw=black!70,xscale=-1] (-15,15) rectangle (22,-25);
+    % \pgftext[right,x=1.8cm,y=5cm]%
+    % {\includegraphics[width=22cm]{\themefigurepath{title_background.pdf}}};
+    % \filldraw[fill=black!10,draw=black!10,xscale=-1] (-15,-1) rectangle (22,-10);
+    % \filldraw[fill=doc,draw=doc,xscale=-1] (18,15) rectangle (22,-25);
+    % \filldraw[fill=black!80,draw=white,thick,xscale=-1] (-5,5) -- (18,5) arc (90:0:0.5) --
+    % (18.5,3.5) arc (0:-90:0.5) -- (-5,3);
+    \pgftext[left,base,x=-17cm,y=5.5cm]{\geofont\color{black!80}\Huge\bfseries PART~\thepart};
+    \pgftext[left,x=-17cm,y=4cm]{\geofont\color{white}\fontsizec{1.3cm}\MakeUppercase{#1}};
+    % \filldraw[fill=white,draw=white,xscale=-1] (3,-25) -- (3,-10) arc (180:90:0.5) -- (14.1,-9.5) arc (90:0:0.5) --
+    % (14.6,-25);
+    \pgftext[right,top,x=-3.5cm,y=-10cm]{
+    \parbox[t]{10.6cm}{
+    {\geofont\Large\bfseries CHAPTERS IN THIS PART:}
+    \startcontents
+    \printcontents{l}{0}{\setcounter{tocdepth}{0}}}
+%    {\geofont\Large\bfseries 1\quad}{\geofontlt\large\color{doc} Questions of Design}\\[10pt]
+%    {\geofont\Large\bfseries 2\quad}{\geofontlt\large\color{doc} Questions of Design}\\[10pt]
+%    {\geofont\Large\bfseries 3\quad}{\geofontlt\large\color{doc} Questions of Design}
+    };
+    \pgftext[right,top,x=-1cm,y=-2cm]{
+    \parbox[t]{\textwidth+\marginparsep+\marginparwidth}{\parindent=1em
+    \geofontlt\normalsize
+    \begin{multicols}{2}
+    {\lettrine[findent=.3em, lhang=0, lines=3]{\@pablfirst}{\@pablsecond}
+    \@partabstractfp
+    \par}
+
+    \@partabstractrp
+    \end{multicols}
+    }
+    }
+    \end{tikzpicture}
+    }%}
+}
+
+\newcommand\partformat[1]{\ifthenelse{\isodd{\value{page}}}{\partformatodd{#1}}{\partformateven{#1}}}
+
+\makeatother
+
+\titleformat{name=\part}[block]
+{\normalfont}{}{0pt}{\partformat}
+%\titleformat{name=\part,page=even}[display]
+%{\normalfont}{}{0pt}{\partformat}
+
+\titlecontents{lchapter}[2.4pc]
+{\addvspace{10pt}%
+\geofontltc\large}%
+{\contentslabel[\geofont\bfseries\Large\color{black}\thecontentslabel]{2.4pc}}
+{}
+{}%
+
+%Chapter title style
+
+%odd page
+\newcommand\chapformatodd[1]{%
+    \ifthenelse{\thechapter>0}
+    {
+    \kern 16.61cm\hbox{
+    \begin{tikzpicture}%
+    % \pgftext[right,x=1.8cm,y=0.2cm]%
+    % {\includegraphics[width=22cm]{\themefigurepath{title_background_monochrome.pdf}}};
+    % \draw[color=white,thick,xscale=-1] (0.5,-8) -- (0.5,-0.5) arc (180:90:0.5) -- ++(15.6,0) arc (90:0:0.5) -- (17.1,-8);
+    % \filldraw[fill=black!20,draw=white,thick,xscale=-1] (22,-1) -- (4.5,-1) arc (90:180:0.5) --
+    % (4,-3) arc (180:270:0.5) -- (22,-3.5);
+    % \filldraw[fill=doc,draw=doc,xscale=-1] (-0.25,7) rectangle (-5,-35);
+    % \filldraw[fill=black,draw=black,xscale=-1] (-0.25,-12) rectangle (-5,-35);
+    \pgftext[right,base,x=-1cm,y=0cm]{\geofont\huge\bfseries CHAPTER};
+    \pgftext[top,x=-2.5cm,y=-1cm]{\geofontlt\fontsizec{3cm} \thechapter};
+    \pgftext[right,x=-4.5cm,y=-2.25cm]{\geofontlt\Huge #1};
+    \end{tikzpicture}
+    }
+    }{
+    \kern 15.36cm\hbox{
+    \begin{tikzpicture}%
+    % \filldraw[fill=black!70,draw=black!70,xscale=-1] (-5,0) rectangle (25,4);
+    % \pgftext[right,top,x=3.0cm,y=4cm]%
+    % {\includegraphics[height=4cm]{\themefigurepath{contents_logo.pdf}}};
+    % \filldraw[fill=black!88,draw=white,thick,xscale=-1] (25,2.5) -- (0.5,2.5) arc
+    % (90:180:0.5) -- (0,1) arc (180:270:0.5) -- (25,0.5);
+    \pgftext[right,x=-0.5cm,y=1.5cm]{\geofont\fontsizec{1.3cm}\color{auxi}\MakeUppercase{#1}}
+    \end{tikzpicture}
+    }
+    }
+    \ifthenelse{\thechapter>0}{\vspace{7cm}}{\vspace{2cm}}
+}
+
+%even page
+\newcommand\chapformateven[1]{%
+    \ifthenelse{\thechapter>0}
+    {
+    \kern -4.44cm\hbox{
+    \begin{tikzpicture}%
+    % \pgftext[left,x=-1.8cm,y=0.2cm]%
+    % {\includegraphics[width=22cm]{\themefigurepath{title_background_monochrome.pdf}}};
+    % \draw[color=white,thick] (0.5,-8) -- (0.5,-0.5) arc (180:90:0.5) -- ++(15.6,0) arc (90:0:0.5) -- (17.1,-8);
+    % \filldraw[fill=black!20,draw=white,thick] (22,-1) -- (4.5,-1) arc (90:180:0.5) --
+    % (4,-3) arc (180:270:0.5) -- (22,-3.5);
+    % \filldraw[fill=doc,draw=doc] (-0.25,7) rectangle (-5,-35);
+    % \filldraw[fill=black,draw=black] (-0.25,-12) rectangle (-5,-35);
+    \pgftext[left,base,x=1cm,y=0cm]{\geofont\huge\bfseries CHAPTER};
+    \pgftext[top,x=2.5cm,y=-1cm]{\geofontlt\fontsizec{3cm} \thechapter};
+    \pgftext[left,x=4.5cm,y=-2.25cm]{\geofontlt\Huge #1};
+    \end{tikzpicture}
+    }
+    }{
+    \begin{tikzpicture}%
+    % \filldraw[fill=black!70,draw=black!70] (-5,0) rectangle (25,4);
+    % \pgftext[left,top,x=-3.0cm,y=4cm]%
+    % {\includegraphics[height=4cm]{\themefigurepath{contents_logo.pdf}}};
+    % \filldraw[fill=black!88,draw=white,thick] (25,2.5) -- (0.5,2.5) arc
+    % (90:180:0.5) -- (0,1) arc (180:270:0.5) -- (25,0.5);
+    \pgftext[left,x=0.5cm,y=1.5cm]{\geofont\fontsizec{1.3cm}\color{auxi}\MakeUppercase{#1}}
+    \end{tikzpicture}
+    }
+    \ifthenelse{\thechapter>0}{\vspace{7cm}}{\vspace{2cm}}
+}
+
+\newcommand\chapformat[1]{\ifthenelse{\isodd{\value{page}}}{\chapformatodd{#1}}{\chapformateven{#1}}}
+
+\titleformat{name=\chapter}[block]
+  {\normalfont}{}{0pt}{\chapformat}
+\titlespacing*{\chapter}{0pt}{*3}{*2}[1pc]
+
+\newlength{\seclength}
+\newcommand\secformat[1]{%
+    \settowidth{\seclength}{\geofont\color{doc}\large\bfseries\MakeUppercase{#1}}
+    \begin{tikzpicture}%
+    % \filldraw[fill=black!18,draw=black!18] (0,-22.5pt) rectangle +(22.5pt,15pt);
+    % \draw[color=black!43,thick] (0,-22.5pt) -- ++(30pt,0) -- ++(\seclength,0)
+                                % (22.5pt,-22.5pt) -- +(0,15pt);
+    \pgftext[center,x=10pt,y=-15pt]{\geofont\color{black!88}\large\bfseries\thesection};
+    \pgftext[left,x=30pt,y=-15pt]{\geofont\color{doc}\large\bfseries\MakeUppercase{#1}};
+    \end{tikzpicture}
+}
+
+\titleformat{name=\section}[block]
+  {\normalfont}{}{0pt}{\secformat}[\vspace{22.5pt}]
+\titlespacing*{\section}{0pt}{*3}{*2}[1pc]
+
+\newcommand\subsecformat[1]{%
+    \begin{tikzpicture}%
+    \pgftext[left,x=0pt,y=-10pt]{\geofont\color{doc}\large\bfseries #1};
+    \end{tikzpicture}
+}
+
+\titleformat{name=\subsection}[block]
+  {\normalfont}{}{0pt}{\subsecformat}[\vspace{10pt}]
+\titlespacing*{\subsection}{0pt}{*3}{*2}[1pc]
+
+%Toc style
+
+\contentsmargin{0cm}
+\titlecontents{part}[0pc]
+{\addvspace{30pt}
+\begin{tikzpicture}
+\draw[fill=black,draw=black] (0pc,-5pt) rectangle (7,-4.9pt);
+\end{tikzpicture}
+\geofontltc\large} {\contentslabel[\kern 2em\lower
+-1.5em\hbox{\geofont\bfseries\color{black}PART\ \thecontentslabel}]{2.4pc}} {}
+{\quad\thecontentspage}
+\titlecontents{chapter}[2.4pc]
+{\addvspace{10pt}%
+\geofont\large\color{doc}\bfseries}%
+{\color{black}\contentslabel[\color{doc}\thecontentslabel]{2.4pc}}
+{}
+{\color{black}\quad\thecontentspage}%
+\titlecontents{section}[2.4pc]
+{\addvspace{5pt}}
+{\contentslabel[\hspace{-0.6pc}\geofont\bfseries\thecontentslabel]{2.4pc}} {}
+{\quad\thecontentspage}[]
+\titlecontents*{subsection}[2.4pc]
+{\addvspace{5pt}\itshape}
+{}
+{}
+{\quad\thecontentspage}[\\]
+
+
+%=============================== Header and Footer ===============================%
+%=================================================================================%
+
+\newlength{\pagenumwd}
+
+\pagestyle{fancy} \fancyhf{}
+\fancyheadoffset[OR]{\dimexpr\marginparsep+\marginparwidth\relax}
+\fancyheadoffset[EL]{\dimexpr\marginparsep+\marginparwidth\relax}
+\fancyhead[RO]{%
+{\footnotesize\geofontltc\rightmark}
+\settowidth{\pagenumwd}{\small\geofont\bfseries\color{black}\thepage}
+\hspace{\dimexpr\marginparsep+\marginparwidth-\pagenumwd-0.2cm\relax}{\small\geofont\bfseries\color{black}\thepage}
+}%Right header of odd pages
+\fancyhead[LE]{%
+{\small\geofont\bfseries\color{black}\thepage}
+\settowidth{\pagenumwd}{\small\geofont\bfseries\color{black}\thepage}
+\hspace{\dimexpr\marginparsep+\marginparwidth-\pagenumwd-0.15cm\relax}{\footnotesize\geofontltc\leftmark}
+} %Left header of even pages
+\fancyfoot[CO]{} \fancyfoot[CE]{}
+\renewcommand{\headrulewidth}{0pt}
+
+\fancypagestyle{plain}{%
+\fancyhf{} % clear all header and footer fields
+\fancyfoot[RO]{\small{\geofont\bfseries\color{black}\thepage}}
+\fancyfoot[LE]{\small{\geofont\bfseries\color{black}\thepage}}}
+
+%======================= Table and Figure Settings================================%
+%=================================================================================%
+% \RequirePackage{xparse}
+% %\RequirePackage{keyval}
+
+\define@key{image}{pos}{\def\i@pos{#1}} % define key-val
+\setkeys{image}{pos=!htbp} % set default
+\newcommand{\image}[2][]{%
+  \begingroup
+  \setkeys{image}{#1}% set passed key-vals
+  \def\@temp{\begin{figure}}%
+  \expandafter\@temp\expandafter[\i@pos]% use position
+  \centering
+  \includegraphics[width=\textwidth]{#2}
+  \end{figure}
+  \endgroup}
+
+\newenvironment{widetable}[1]{
+  \begingroup
+  \def\@temppos{#1}
+  \def\@temp{\begin{table*}}
+  \expandafter\@temp\expandafter[\@temppos]
+    %\begin{table*}[#1]
+    \setmathfont{Geometric415BT-Lite.ttf}}
+  {\setmathfont[Ligatures=TeX]{xits-math.otf}
+  \end{table*}
+\endgroup}
+
+\newenvironment{narrowtable}[1]{\begin{table*}[#1]
+    \setmathfont{Geometric415BT-Lite.ttf}}
+  {\setmathfont[Ligatures=TeX]{xits-math.otf}
+  \end{table*}}
+
+%\setlength{\abovecaptionskip}{6pt}%Title position
+%\setlength{\belowcaptionskip}{6pt}
+\renewcommand{\arraystretch}{1.}%Spacing in Table environments
+\renewcommand\figurename{图}
+\renewcommand\tablename{表}
+% \DeclareColorBox{greyplate}{\colorbox{gray!8.6}}
+% \DeclareObjectSet{geofontob}{\geofontf\small}
+% \DeclareFloatFont{geofontlb}{\geofontf\color{black}\bfseries}
+% \DeclareFloatFont{geofonttx}{\geofontf\color{black}\footnotesize}
+% \DeclareFloatFont{geofonttxf}{\geofontf\color{gray}\footnotesize}
+% \DeclareFloatFont{flfootfont}{\color{gray}\scriptsize}
+% \newlength{\caplength}
+% \setlength{\caplength}{\textwidth}%+\marginparsep+\marginparwidth}
+% \usetikzlibrary{positioning}
+% \tikzset{every picture/.append style={trim left=0}}
+% %wide table caption style
+% \DeclareCaptionFormat{lside}{\noindent%
+% \begin{tikzpicture}[trim left]%every node/.style={inner sep=0,outer sep=0}]
+% % % \node [rectangle, fill=black!78, anchor=north west, minimum width=\caplength, minimum height=1.5cm] (titlebox) {};
+% % \draw[fill=black!78,draw=black!78] (-0.2155,0.1055) rectangle +(\caplength,-1.5);
+% \draw[fill=gray!78,draw=gray!78] (-\fboxsep,\fboxsep) rectangle +(\caplength,-1.5);
+% \draw[fill=doc,draw=doc] (-\fboxsep,\fboxsep) rectangle +(3,-0.6);
+% \pgftext[left,x=0cm,y=-0.27cm]{#1#2};
+% \pgftext[left,x=0cm,y=-0.9cm]{#3};
+% \end{tikzpicture}
+% \vspace{1.5cm} }
+
+% \newlength{\capbscsepleft}
+% \newlength{\capbscsepright}
+% %wide figure caption style
+% \DeclareCaptionFormat{lsidefigure}{\noindent%
+% \begin{tikzpicture}
+% \draw[fill=doc,draw=doc] (-\capbscsepleft,\fboxsep) rectangle +({\capbscsepright+3cm},-0.6);
+% \pgftext[left,x=0cm,y=-0.25cm]{#1#2};
+% \pgftext[left,x=0.1cm,y=-1.0cm]{\parbox[t]{2.5cm}{#3}};
+% \end{tikzpicture}
+% \vspace{1.5cm} }
+
+%wide table foot style
+% \DeclareCaptionFormat{lsidefoot}{\noindent%
+% \begin{tikzpicture}
+% \draw[fill=white,draw=white] (-\fboxsep,\fboxsep) rectangle +(\caplength,-1);
+% \pgftext[left,top,x=-\fboxsep,y=-0.2cm]{\parbox[t]{\caplength}{#3}};
+% \end{tikzpicture}
+% }
+%wide figure foot style
+% \DeclareCaptionFormat{widefigurefoot}{ \kern0.1cm
+% \parbox[t]{2.5cm}{\vspace{-0.3cm}#3} }
+
+% \newlength{\capbesideheight}
+%short side table caption style
+% \DeclareCaptionFormat{ctab}{\noindent%
+% \begin{tikzpicture}
+% \draw[fill=black!78,draw=black!78] (-\fboxsep,\fboxsep) rectangle
+% +(3,-\capbesideheight);
+% \draw[fill=doc,draw=doc] (-\fboxsep,\fboxsep) rectangle
+% +(3,-0.6);
+% \pgftext[left,x=0cm,y=-0.25cm]{#1#2};
+% \pgftext[left,top,x=0cm,y=-0.6cm]{\parbox[t]{2cm}{#3}};
+% \end{tikzpicture}
+% }
+%short table foot style
+% \DeclareCaptionFormat{ctabfoot}{\noindent%
+% \begin{tikzpicture}
+% \draw[fill=white,draw=white] (-\fboxsep,\baselineskip-\capbesideheight)
+% rectangle +(\textwidth,-1);
+% \pgftext[left,top,x=-\fboxsep,y=\baselineskip-\capbesideheight-\fboxsep-0.9]{\parbox[t]{\textwidth+3cm}{#3}};
+% \end{tikzpicture}
+% }
+
+%always full fill the text width and margin width
+% \DeclareMarginSet{hangoutter}%
+% {\setfloatmargins {\ifthenelse{\isodd{\value{page}}}{\hfil}
+% {\hskip-\marginparwidth\hskip-\marginparsep}}{\hfil}}
+
+% \floatsetup[widefloat]{style=plain,framestyle=colorbox,margins=hangoutter,
+% framearound=row,colorframeset=greyplate,frameset={\fboxrule0pt},
+% framestyle=colorbox,framefit=yes,heightadjust=object,valign=c,rowfill=yes,
+% objectset=geofontob,floatwidth=\caplength}
+
+% \newlength{\cflwidth}
+% \setlength{\cflwidth}{\textwidth-96pt-3cm}
+%short table
+% \floatsetup[table]{style=plain,framestyle=colorbox,%margins=hangoutter,
+% capbesideposition=inside,capbesidesep=none,
+% capbesideposition={left,top},
+% capbesidewidth=3cm,
+% framearound=row,colorframeset=greyplate,frameset={\fboxrule0pt},
+% framestyle=colorbox,framefit=yes,heightadjust=object,valign=c,
+% objectset=geofontob,floatwidth=\cflwidth}%9.53cm}
+
+% \captionsetup[table]{format=lside,
+% justification=justified,singlelinecheck=false, labelfont=geofontlb,
+% textfont=geofonttx, labelsep=none}
+
+% \captionsetup[figure]{format=lsidefigure,
+% justification=justified,singlelinecheck=false, labelfont=geofontlb,
+% textfont=geofonttxf,labelsep=none}
+% http://www.peteryu.ca/tutorials/publishing/latex_captions
+\captionsetup[figure]{labelfont=it,name={图},textfont={bf,it},labelsep=space}
+
+\captionsetup[capbesidetable]{format=ctab}
+
+\captionsetup[floatfoot]{format=lsidefoot,
+justification=justified,singlelinecheck=false,%
+footfont={scriptsize,color=black,normalfont}}
+%definition of wide figure float
+\newfloatcommand{wdfigbox}{figure}[{
+\capbeside
+\thisfloatsetup{capbesidesep=none,
+capbesideposition={inside,top},
+capbesidewidth=3cm,
+objectset=centering,
+footposition=caption,
+floatwidth=\textwidth}
+\captionsetup[floatfoot]{format=widefigurefoot,footfont={color=doc,normalfont,scriptsize}}
+\ifthenelse{\isodd{\value{page}}}
+{\setlength{\capbscsepleft}{0pt}\setlength{\capbscsepright}{\fboxsep}
+  \thisfloatsetup{capbesideposition={right}}}
+{\setlength{\capbscsepleft}{\fboxsep}\setlength{\capbscsepright}{0pt}
+  \thisfloatsetup{capbesideposition={left}}}
+}][\textwidth-3cm]
+\renewfloatcommand{ttabbox}{table}[\captop][\caplength]
+
+%=== new float declaration ========%
+%small table box
+\newcommand{\stabbox}[3]{
+\floatbox[{
+\setlength{\capbesideheight}{#1}
+\capbeside
+\captionsetup[floatfoot]{format=ctabfoot}}]{table}[\textwidth][#1][s]
+{#2}{#3}
+\vspace{2em}
+}
+
+\DeclareNewFloatType{example}%
+{placement=!htbp,within=chapter,fileext=loe,name=EXAMPLE}
+
+\DeclareCaptionLabelFormat{lsideexplb}{\noindent%
+\begin{tikzpicture}[trim left]
+\draw[fill=doc,draw=doc] (-\capbscsepleft,{\fboxsep+0.22cm}) rectangle +(2,-1);
+\draw[fill=black!78,draw=black!78] (-\capbscsepleft,{\fboxsep+0.22cm})++(2,0) rectangle +(1,-1);
+\pgftext[center,bottom,x={-\capbscsepleft+1cm},y=-0.56cm]{\color{white}#1};
+\pgftext[center,bottom,x={-\capbscsepleft+2.5cm},y=-0.56cm]{\color{white}#2};
+\end{tikzpicture}
+}
+
+\DeclareCaptionTextFormat{lsideexptx}{\noindent%
+\begin{tikzpicture}[trim left]
+\pgftext[left,x={-2\fboxsep},y=-1.2cm]{\parbox[t]{2.5cm}{#1}};
+\end{tikzpicture}
+\vspace{1.5cm} }
+
+\captionsetup[example]{labelformat=lsideexplb,textformat=lsideexptx,
+justification=justified,singlelinecheck=false,
+labelfont=geofontlb,textfont=geofonttxf,labelsep=none}
+
+\DeclareFloatSeparators{capexpsep}{\hskip7pt}
+
+%\DeclareFloatStyle{wdflbox}{}
+
+\newfloatcommand{wdexpbox}{example}[{
+\capbeside \thisfloatsetup{capbesidesep=none, capbesideposition={inside,top},
+capbesidewidth=3cm, capbesidesep=capexpsep, objectset=justified,
+objectset=geofontob, footposition=caption, floatwidth=\textwidth}
+\captionsetup[floatfoot]{format=widefigurefoot,footfont={color=doc,normalfont,scriptsize}}
+\ifthenelse{\isodd{\value{page}}}
+{\setlength{\capbscsepleft}{0pt}\thisfloatsetup{capbesideposition={right}}}
+{\setlength{\capbscsepleft}{1.7\fboxsep}\thisfloatsetup{capbesideposition={left}}}
+}][\textwidth-3cm-7pt]
+
+%======================== Bibliography Settings ===================================%
+%=================================================================================%
+
+
+
+%======================== Other Style Settings ===================================%
+%=================================================================================%
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\newcommand*\Diff[1]{\mathop{}\!\mathrm{d^#1}}
+
+\newcommand{\tmarginpar}[2]{\marginpar{\geofont\bfseries{\color{doc}#1}\\[5pt]#2}}
+\endinput
+

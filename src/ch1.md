@@ -5,7 +5,7 @@
 老子，（前600年—前470年之后）姓李名耳，字伯阳，传说老子出生时就长有白色的眉毛及胡子，所以被后人称为老子。
 
 \begin{figure}[H]
-        \includegraphics[totalheight=4cm]{images/lier-1.jpg}
+        \includegraphics[totalheight=6cm]{images/lier-1.jpg}
         \caption{老子}
         \label{fig:lier-1}
 \end{figure}
@@ -86,7 +86,7 @@
 公元前538年的一天，孔子对弟子南宫敬叔说：“周之守藏室史老聃，博古通今，知礼乐之源，明道德之要。今吾欲去周求教，汝愿同去否？”南宫敬叔欣然同意，随即报请鲁君。鲁君准行。遣一车二马一童一御，由南宫敬叔陪孔子前往。老子见孔丘千里迢迢而来，非常高兴，教授之后，又引孔丘访大夫苌弘。苌弘善乐，授孔丘乐律、乐理；引孔丘观祭神之典，考宣教之地，察庙会礼仪，使孔丘感叹不已，获益不浅。逗留数日。孔丘向老子辞行。老聃送至馆舍之外，赠言道：“吾闻之，富贵者送人以财，仁义者送人以言。吾不富不贵，无财以送汝；愿以数言相送。当今之世，聪明而深察者，其所以遇难而几至於死，在於好讥人之非也；善辩而通达者，其所以招祸而屡至於身，在於好扬人之恶也。为人之子，勿以己为高；为人之臣，勿以己为上，望汝切记。”孔丘顿首道：“弟子一定谨记在心！”
 
 \begin{figure}[H]
-        \includegraphics[totalheight=4cm]{images/lier-kong-1.png}
+        \includegraphics[totalheight=6cm]{images/lier-kong-1.png}
         \caption{孔子问礼}
         \label{fig:lier-kong-1}
 \end{figure}
@@ -124,7 +124,7 @@
 阳子居道：“先生修身，坐需寂静，行需松弛，饮需素清，卧需安宁，非有深宅独户，何以能如此？置深宅独户，不招仆役，不备用具，何以能撑之？招聘仆役，置备用具，不立家规，何以能治之？”
 
 \begin{figure}[H]
-        \includegraphics[totalheight=4cm]{images/lier-4.png}
+        \includegraphics[totalheight=6cm]{images/lier-4.png}
         \caption{老子与弟子}
         \label{fig:lier-4}
 \end{figure}
@@ -148,7 +148,7 @@
 庚桑楚弟子中有一人，名南荣，年过三十，今日闻庚桑楚养生高论，欲求养生之道。庚桑楚道：“古人曰：土蜂不能孵青虫，越鸡不能孵鸿鹄，各有所能，各有所不能也。桑楚之才有限，不足以化汝，汝何不南去宋国沛地求教老聃先生？”南荣闻言，辞别庚桑楚，顶风冒雪，行七日七夜而至老聃居舍。
 
 \begin{figure}[H]
-        \includegraphics[totalheight=4cm]{images/lier-5.png}
+        \includegraphics[totalheight=6cm]{images/lier-5.png}
         \caption{老子游历}
         \label{fig:lier-5}
 \end{figure}
@@ -180,7 +180,7 @@
 那时老子沉思默想，将他的智慧一个字一个字地写在了简牍上，先写了上篇，又接着写了下篇，据说写了几天。写完了一数，共有五千来字，取名为《道德经》，上篇叫《道经》，下篇叫《德经》，又分成八十一章。于是一部“五千言”的惊天动地的伟大著作诞生了！据说，关令尹喜读到这样美妙的著作，深深地陶醉了，被吸引了。他对老子说：“读了您的著作啊，我再也不想当这个边境官了，我要跟您一起出走了。”老子莞尔一笑，同意了。据说，关令尹喜真的跟着老子出走了，后来还有人看到他们两人一起在西域流沙那儿呢，而且都活了好长好长的岁数！
 
 \begin{figure}[H]
-        \includegraphics[totalheight=4cm]{images/lier-6.png}
+        \includegraphics[totalheight=6cm]{images/lier-6.png}
         \caption{老子出关}
         \label{fig:lier-6}
 \end{figure}
@@ -201,7 +201,7 @@
 太清宫位于鹿邑县城东十里的太清宫镇， 为老子的诞生地。
 
 \begin{figure}[H]
-        \includegraphics[totalheight=4cm]{images/lier-2.png}
+        \includegraphics[totalheight=6cm]{images/lier-2.png}
         \caption{太清宫}
         \label{fig:lier-2}
 \end{figure}
@@ -215,7 +215,7 @@
 传说老子修道成仙，于此处飞升，故名“升仙台”。山门下青石台阶共32层，加上正殿前一层，恰为33层，正符合老子升33层青天之说。
 
 \begin{figure}[H]
-        \includegraphics[totalheight=4cm]{images/lier-3.png}
+        \includegraphics[totalheight=6cm]{images/lier-3.png}
         \caption{老君台}
         \label{fig:lier-3}
 \end{figure}

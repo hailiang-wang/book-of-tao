@@ -6,7 +6,7 @@
 # constants
 baseDir=$(cd `dirname "$0"`;pwd)
 rootDir=$(cd `dirname "$baseDir"`;pwd)
-BOOK_NAME=一本书的由来
+BOOK_NAME=道德经注
 sourceDir=$rootDir/src
 buildDir=$rootDir/_build
 DATE_WITH_TIME=`date "+%Y-%m-%d-%H%M%S"`

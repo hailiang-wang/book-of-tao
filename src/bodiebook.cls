@@ -17,6 +17,7 @@
 %=================================================================================%
 
 \usepackage[normalem]{ulem}
+\usepackage{fontspec}
 \useunder{\uline}{\ul}{}
 \RequirePackage{amsfonts}
 
@@ -29,6 +30,26 @@
 
 %Font size customize
 \newcommand{\fontsizec}[1]{\fontsize{#1}{\baselineskip}\selectfont}
+
+\usepackage{libertine}
+\usepackage{pgf} % for the calculation
+% \libcirc and \libcircblk display their '0' if the parameter is out of range
+\newcommand{\libcirc}[1]{\pgfmathparse{
+    ifthenelse(#1 > 0 && #1 < 21, Hex(9311+#1), Hex(9450)
+    }\libertineGlyph{uni\pgfmathresult}}
+\newcommand{\libcircdbl}[1]{\pgfmathparse{Hex(9460+#1)}\libertineGlyph{uni\pgfmathresult}}
+\newcommand{\libcircblk}[1]{\pgfmathparse{
+    ifthenelse(#1 > 0 && #1 < 11, Hex(10101+#1),
+        ifthenelse(#1 > 10 && #1 < 21, Hex(9450-10+#1),
+            Hex(9471)
+        )
+    )
+    }\libertineGlyph{uni\pgfmathresult}}
+
+\newcommand{\juncirc}[1]{{\fontspec[Ligatures=Discretionary]{Junicode}[#1]}}
+\newcommand{\juncircdbl}[1]{{\fontspec[Ligatures=Discretionary]{Junicode}[[#1]]}}
+\newcommand{\juncircblk}[1]{{\fontspec[Ligatures=Discretionary]{Junicode}<#1>}}
+
 
 %\RequirePackage{times,txfonts}  %times new roman
 

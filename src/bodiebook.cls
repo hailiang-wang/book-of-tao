@@ -25,8 +25,12 @@
 \RequirePackage{kpfonts}
 \RequirePackage{fontspec,unicode-math}
 
-\setmainfont[Ligatures=TeX]{Times New Roman}
-\setmathfont[Ligatures=TeX]{xits-math.otf}
+%\setmainfont[Ligatures=TeX]{Times New Roman}
+\setmathfont[
+    Path=fonts/,
+    Ligatures=TeX]{xits-math.otf}
+\setCJKmainfont[Path=fonts/]{SourceHanSansCN-Normal.otf}
+\parindent 2em              % 段首缩进
 
 %Font size customize
 \newcommand{\fontsizec}[1]{\fontsize{#1}{\baselineskip}\selectfont}

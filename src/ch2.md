@@ -604,7 +604,7 @@ $\S$ \textbf{注释}
 
 $\S$ \textbf{原文}
 
-唯之与阿①，相去几何？美之与恶②，相去若何？人之所畏③，不可不畏。荒兮④，其未央哉⑤！众人熙熙⑥，如享太牢⑦，如春登台⑧。我⑨独泊兮⑩，其未兆\libcirc{11}；沌沌兮\libcirc{12}，如婴儿之未孩\libcirc{13}；累累兮\libcirc{14}，若无所归。众人皆有余\libcirc{15}，而我独若遗\libcirc{16}。我愚人之心也哉\libcirc{17}！俗人昭昭\libcirc{18}，我独昏昏\libcirc{19}。俗人察察\libcirc{20}，我独闷闷\libcirc{21}。澹兮\libcirc{22}，其若海；飘兮\libcirc{23}，若无止。众人皆有以\libcirc{24}，而我独顽且鄙\libcirc{25}。我独异于人，而贵食母\libcirc{26}。
+唯之与阿①，相去几何？美之与恶②，相去若何？人之所畏③，不可不畏。荒兮④，其未央哉⑤！众人熙熙⑥，如享太牢⑦，如春登台⑧。我⑨独泊兮⑩，其未兆\libcirc{11}；沌沌兮\libcirc{12}，如婴儿之未孩\libcirc{13}；傫傫兮\libcirc{14}，若无所归。众人皆有余\libcirc{15}，而我独若遗\libcirc{16}。我愚人之心也哉\libcirc{17}！俗人昭昭\libcirc{18}，我独昏昏\libcirc{19}。俗人察察\libcirc{20}，我独闷闷\libcirc{21}。澹兮\libcirc{22}，其若海；飂兮\libcirc{23}，若无止。众人皆有以\libcirc{24}，而我独顽且鄙\libcirc{25}。我独异于人，而贵食母\libcirc{26}。
 
 $\S$ \textbf{译文}
 
@@ -639,7 +639,7 @@ $\S$ \textbf{注释}
 
 \libcirc{13} 孩：同“咳”，形容婴儿的笑声。
 
-\libcirc{14} 累累兮：疲倦闲散的样子。
+\libcirc{14} 傫傫兮：疲倦闲散的样子。
 
 \libcirc{15} 有余：有丰盛的财货。
 
@@ -657,7 +657,7 @@ $\S$ \textbf{注释}
 
 \libcirc{22} 澹兮：辽远广阔的样子。
 
-\libcirc{23} 飓兮：急风。
+\libcirc{23} 飂兮：急风。
 
 \libcirc{24} 有以：有用、有为，有本领。
 

@@ -1,6 +1,17 @@
-# 著书模版
+# 《道德经注》
 
-LaTex + Pandoc 著书模版
+道德经是中国文化的瑰宝，下载《道德经注》[链接](https://github.com/Samurais/book-of-tao/raw/master/docs/book-of-tao.pdf)，学习道德经使人更有智慧。
+
+<img src="./docs/laozi.jpeg" class="center" width="600">
+
+
+为了方便学习道德经，我整理了一些网络资料，并加上了自己的一些理解在释义中，排版精美，并贡献排版项目。
+
+<img src="./docs/sample.png" class="center" width="600">
+
+# 贡献
+
+本书使用`Markdown`编写，通过`Pandoc`处理为`Tex`文件，然后通过`LaTex`进行排版。
 
 ## 依赖
 
@@ -46,20 +57,11 @@ Compiled with pandoc-types 1.17.0.4, texmath 0.9, skylighting 0.1.1.4
 
 ## 书写
 
-* 书名、作者：
+使用编辑器修改`src/`文件夹下的Markdown内容。
 
-更新`src/main.tex`。
+# 鸣谢
 
-* 引用
-
-更新`src/bibliography.bib`。
-
-* 章节
-
-在`src`中添加`chN.md`，更新该章节到`src/body.tex`中。
-
-
-更多书写示例参考 [*src/ch1.md*](./src/ch1.md)
+主要内容来源[www.daodejing.org](https://www.daodejing.org)。
 
 
 # License (MIT)

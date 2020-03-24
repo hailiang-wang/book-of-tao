@@ -105,7 +105,7 @@ function build(){
     if [ $? -eq 0 ]; then
         cd $baseDir/../dist
         cp main.pdf $BOOK_NAME-$DATE_WITH_TIME.pdf
-        cp main.pdf ../docs/book-of-tao.pdf
+        cp main.pdf ../docs/道德经.pdf
         echo "generated " dist/$BOOK_NAME-$DATE_WITH_TIME.pdf
         echo "done."
     fi

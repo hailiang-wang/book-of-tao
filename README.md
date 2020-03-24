@@ -1,6 +1,9 @@
 # 《道德经注》
 
-道德经是中国文化的瑰宝，下载《道德经注》[链接](https://github.com/Samurais/book-of-tao/raw/master/docs/book-of-tao.pdf)，学习道德经使人更有智慧。
+
+道德经是中国文化的瑰宝，下载《道德经注》[链接](https://github.com/Samurais/book-of-tao/raw/master/docs/道德经.pdf)，学习道德经使人更有智慧。
+
+"Tao Te Ching" is a gem of Chinese culture, studying the Tao Te Ching makes people have more wisdom, download it from [link](https://github.com/Samurais/book-of-tao/raw/master/docs/道德经.pdf) in Chinese version.
 
 <img src="./docs/laozi.jpeg" class="center" width="600">
 
@@ -66,7 +69,7 @@ Compiled with pandoc-types 1.17.0.4, texmath 0.9, skylighting 0.1.1.4
 
 # License (MIT)
 
-Copyright 2019 Hai Liang Wang <hailiang.hl.wang@gmail.com> 
+Copyright (2019-2020) Hai Liang Wang <hailiang.hl.wang@gmail.com> 
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

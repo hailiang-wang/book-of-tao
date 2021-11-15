@@ -1,7 +1,7 @@
 # 《道德经注》
 
 
-道德经是中国文化的瑰宝，下载《道德经注》[链接](https://github.com/Samurais/book-of-tao/raw/master/docs/道德经.pdf)，学习道德经使人更有智慧。
+道德经是中国文化的瑰宝，下载《道德经注》[链接](https://github.com/hailiang-wang/book-of-tao/raw/master/docs/道德经.pdf)，学习道德经使人更有智慧。
 
 "Tao Te Ching" is a gem of Chinese culture, studying the Tao Te Ching makes people have more wisdom, download it from [link](https://github.com/Samurais/book-of-tao/raw/master/docs/道德经.pdf) in Chinese version.
 
